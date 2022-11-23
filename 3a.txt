@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>JavaScript - Program to Check a number is Armstrong or
+not</title>
+<script type="text/javascript">
+function checkArmstrong(){
+let sum = 0;
+var num;
+num=Number(document.getElementById('txtNumber').value);
+var pTag= document.getElementById('pPrint');
+let temp=num;
+while (temp > 0) {
+ let remainder = temp % 10;// finding the one's digit
+sum += remainder * remainder * remainder;// removing last digit
+from the number
+temp = parseInt(temp / 10); // convert float into integer
+}
+if (sum == num) {// check the condition
+pTag.innerHTML=(num)+" is an Armstrong number";
+}
+else {
+pTag.innerHTML=(num)+" is not an Armstrong number"
+}}
+</script></head>
+<body style="text-align: center;">
+<p>Enter a Number:<input type="text" id="txtNumber"
+placeholder="Enter three digit number"/></p>
+<p><input type="button" value="Submit."
+onclick='checkArmstrong()'/>
+<!--print numbers-->
+<p id="pPrint"></p></body></html>
